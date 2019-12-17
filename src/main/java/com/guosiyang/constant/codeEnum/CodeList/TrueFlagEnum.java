@@ -1,6 +1,8 @@
 package com.guosiyang.constant.codeEnum.CodeList;
 
 import com.guosiyang.constant.codeEnum.CodeAble;
+import com.guosiyang.constant.codeEnum.CodeEnumUtil;
+import com.sun.org.apache.bcel.internal.classfile.Code;
 
 /**
  * @program: commonutil
@@ -11,7 +13,7 @@ import com.guosiyang.constant.codeEnum.CodeAble;
  * @sign: 熙熙攘攘, 人来人往
  * @description:
  */
-public enum TrueFlagEnum  implements CodeAble {
+public  enum TrueFlagEnum  implements CodeAble {
     /*
     该枚举类型表示返回正确
     */
@@ -31,5 +33,15 @@ public enum TrueFlagEnum  implements CodeAble {
     @Override
     public String getCodeType() {
         return CODETYPE;
+    }
+
+    @Override
+    public TrueFlagEnum equalsCode(CodeAble codeB) {
+        return CodeAble.CodeEquals(this,codeB);
+    }
+
+    @Override
+    public Integer getCodeVaule() {
+        return CodeEnumUtil.getCommonCode(this);
     }
 }

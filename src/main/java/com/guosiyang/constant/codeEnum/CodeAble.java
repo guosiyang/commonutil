@@ -16,7 +16,6 @@ public interface CodeAble {
      * @author 郭思洋
      * @sign 熙熙攘攘,人来人往
      * @date 2019-12-15
-
      * @return
      * @throws
      * @since
@@ -28,12 +27,32 @@ public interface CodeAble {
      * @author 郭思洋
      * @sign 熙熙攘攘,人来人往
      * @date 2019-12-15
+     * @return
+     * @throws
+     * @since
+     * @description 必须对于对象提供类型判断
+    */
+    abstract TrueFlagEnum equalsCode(CodeAble codeB);
+    /**
+     * @author 郭思洋
+     * @sign 熙熙攘攘,人来人往
+     * @date 2019-12-15
 
      * @return
      * @throws
      * @since
-     * @description 该方法获取对应的枚举的CodeType类型
+     * @description 该方法描述一个enum对象必须存在相关的对应的码值,如果不想使用自定义的码值 则可以使用默认的enum的自动排序码值
     */
+    abstract Integer getCodeVaule();
+    /**
+     * @author 郭思洋
+     * @sign 熙熙攘攘,人来人往
+     * @date 2019-12-15
+     * @return
+     * @throws
+     * @since
+     * @description 该方法获取对应的枚举的CodeType类型
+     */
     public static String getCodeType(CodeAble codeAble){
         return  codeAble.getCodeType();
     }
@@ -41,7 +60,6 @@ public interface CodeAble {
      * @author 郭思洋
      * @sign 熙熙攘攘,人来人往
      * @date 2019-12-15
-
      * @return
      * @throws
      * @since
