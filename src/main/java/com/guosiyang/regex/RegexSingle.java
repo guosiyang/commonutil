@@ -47,7 +47,7 @@ public class RegexSingle {
      * @description: 创建内部类 对外暴露内部类 该内部类主要是提供相关对数据增删改查操作
      * 注意 : 该数据类型不允许进行删除或者进行更新 调用会进行报错
      */
-    class RegexSingleOperator implements OperateMapDataAble<String,Matcher>{
+     class RegexSingleOperator implements OperateMapDataAble<String,Matcher>{
         AbstractMap<String,Matcher> dataMap=null;
         //当第一次被被调用时自动绑定到RegexSingle中的数据存储集合
         {
@@ -113,7 +113,5 @@ public class RegexSingle {
         return regexSingle;
     }
 
-    public static OperateMapDataAble<String,Matcher> getOperatorData(){
-         return new RegexSingleOperator();
-    }
+
 }
