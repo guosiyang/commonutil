@@ -101,6 +101,11 @@ public class RegexSingle {
             if (regexSingle.addDataMapSize() != TrueFlagEnum.TRUE){
                 return TrueFlagEnum.FALSE;
             }
+            //将插入数据以及实时个更新当前数量设计为同步操作
+            synchronized (regexSingle){
+                dataMap.put(key,value);
+                nowKeyValueNum.getAndIncrement();
+            }
             return TrueFlagEnum.TRUE;
         }
 
@@ -128,16 +133,20 @@ public class RegexSingle {
 
     /**
      * @author 郭思洋
-     * @description 为dataMap进行扩容准备 设计思路
+     * @description 为dataMap进行扩容准备 设计思路当存储量不够的时候 根据相关文献资料查阅 如果在当前的量级
+     * 自动扩容三次以上 再散列的性能会无比下降 所以我们索性就自动实现创建更新来进行操作
+     * 设计思路 因为我们锁的是单例对象 故在任何时刻最多有一个线程在进行操作(同时我们为了保证数据一致性 我也把map跟nowkeyvalue同步一起绑定)
+     * 所以我在最外层设计的是-2 , 当达到0时是自动扩容 -1是判断临界值 -2是包含可能regexsingle里面有一个更新线程在处理
      */
 
     private TrueFlagEnum addDataMapSize(){
-        if (nowKeyValueNum.doubleValue() >= ((nowInitial-1) * START_LOAD_FACTOR) - 1){
+        if (nowKeyValueNum.doubleValue() >= ((nowInitial-1) * START_LOAD_FACTOR) - 2){
             synchronized (regexSingle) {
                 if (nowKeyValueNum.doubleValue() >= ((nowInitial-1) * START_LOAD_FACTOR) - 1){
                     int addAfterInitial = (nowInitial - 1)  * 2 + 1 ;
                     AbstractMap<String, Matcher> addAfterHashMap =new ConcurrentHashMap<>(addAfterInitial,START_LOAD_FACTOR,START_CONCURRENCY_LEVEL);
                     addAfterHashMap.putAll(stringToMathcer);
+                    nowInitial = addAfterInitial;
                     stringToMathcer=addAfterHashMap;
                 }
             }
