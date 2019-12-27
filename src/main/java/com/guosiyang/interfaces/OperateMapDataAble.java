@@ -10,55 +10,55 @@ import com.guosiyang.constant.codeEnum.CodeList.TrueFlagEnum;
  * @program: commonutil
  * @className: OperateDataAble
  * @version: 1.0
- * @author: ¹ùË¼Ñó
+ * @author: éƒ­æ€æ´‹
  * @date: 2019-12-15
- * @sign: ÎõÎõÈÁÈÁ, ÈËÀ´ÈËÍù
- * @description: ¶ÔÊı¾İ²Ù×÷Ìá¹©Ïà¹Ø½Ó¿Ú
+ * @sign: ç†™ç†™æ”˜æ”˜, äººæ¥äººå¾€
+ * @description: å¯¹æ•°æ®æ“ä½œæä¾›ç›¸å…³æ¥å£
  */
 public interface OperateMapDataAble<K,V> extends OperatorAble {
     /**
-     * @author ¹ùË¼Ñó
+     * @author éƒ­æ€æ´‹
      * @date 2019-12-08
-     * @description Ìá¹©²éÑ¯²¢·µ»Ø½Ó¿Ú(Õë¶ÔÓ³Éä²éÑ¯)
+     * @description æä¾›æŸ¥è¯¢å¹¶è¿”å›æ¥å£(é’ˆå¯¹æ˜ å°„æŸ¥è¯¢)
      */
     public abstract V query(K key);
 
     /**
-     * @author ¹ùË¼Ñó
+     * @author éƒ­æ€æ´‹
      * @date 2019-12-08
-     * @description Ìá¹©²éÑ¯ÊÇ·ñ´æÔÚ½Ó¿Ú TRUE Îª´æÔÚ FLASEÎª²»´æÔÚ
+     * @description æä¾›æŸ¥è¯¢æ˜¯å¦å­˜åœ¨æ¥å£ TRUE ä¸ºå­˜åœ¨ FLASEä¸ºä¸å­˜åœ¨
      */
     public abstract TrueFlagEnum exist(K key);
 
     /**
-     * @author ¹ùË¼Ñó
+     * @author éƒ­æ€æ´‹
      * @date 2019-12-08
-     * @description Ìá¹©¸üĞÂ½Ó¿Ú²¢½øĞĞ·µ»ØÊÇ·ñÕıÈ·¸üĞÂ
+     * @description æä¾›æ›´æ–°æ¥å£å¹¶è¿›è¡Œè¿”å›æ˜¯å¦æ­£ç¡®æ›´æ–°
      */
     public abstract TrueFlagEnum update(K key,V value);
 
     /**
-     * @author ¹ùË¼Ñó
+     * @author éƒ­æ€æ´‹
      * @date 2019-12-08
-     * @description Ìá¹©ĞÂÔö½Ó¿Ú
+     * @description æä¾›æ–°å¢æ¥å£
      */
     public abstract TrueFlagEnum add(K key,V value);
 
     /**
-     * @author ¹ùË¼Ñó
+     * @author éƒ­æ€æ´‹
      * @date 2019-12-08
-     * @description Ìá¹©ĞÂÔö½Ó¿Ú
+     * @description æä¾›æ–°å¢æ¥å£
      */
     public abstract TrueFlagEnum delete(K key,V value);
 
 //    /**
-//     * @author ¹ùË¼Ñó
+//     * @author éƒ­æ€æ´‹
 //     * @date 2019-12-08
-//     * @description Ìá¹©Ä¬ÈÏ·½·¨½øĞĞ¿ÉÒÔ¶ÔÊµÏÖ¸Ã½Ó¿ÚµÄ´«Èë¶ÔÓ¦µÄ²Ù×÷·û½øĞĞ²Ù×÷
+//     * @description æä¾›é»˜è®¤æ–¹æ³•è¿›è¡Œå¯ä»¥å¯¹å®ç°è¯¥æ¥å£çš„ä¼ å…¥å¯¹åº”çš„æ“ä½œç¬¦è¿›è¡Œæ“ä½œ
 //     */
 //    public  static <K,V> Object  operateData(OperateMapDataAble<K,V> operateMapDataAble,String operate,Object...mehtodParams){
 //        if (operateMapDataAble ==null || operate==null || "".equals(operate))
-//            throw new NullPointerException("´«Èë²ÎÊıÎª¿Õ");
+//            throw new NullPointerException("ä¼ å…¥å‚æ•°ä¸ºç©º");
 //        Class<OperateMapDataAble<K,V>> operateMapDataAbleClass= (Class<OperateMapDataAble<K, V>>) operateMapDataAble.getClass();
 //        operateMapDataAbleClass
 //
