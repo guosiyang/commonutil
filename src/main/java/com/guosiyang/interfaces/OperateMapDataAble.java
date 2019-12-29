@@ -51,16 +51,5 @@ public interface OperateMapDataAble<K,V> extends OperatorAble {
      */
     public abstract TrueFlagEnum delete(K key,V value);
 
-//    /**
-//     * @author 郭思洋
-//     * @date 2019-12-08
-//     * @description 提供默认方法进行可以对实现该接口的传入对应的操作符进行操作
-//     */
-//    public  static <K,V> Object  operateData(OperateMapDataAble<K,V> operateMapDataAble,String operate,Object...mehtodParams){
-//        if (operateMapDataAble ==null || operate==null || "".equals(operate))
-//            throw new NullPointerException("传入参数为空");
-//        Class<OperateMapDataAble<K,V>> operateMapDataAbleClass= (Class<OperateMapDataAble<K, V>>) operateMapDataAble.getClass();
-//        operateMapDataAbleClass
-//
-//    }
+
 }

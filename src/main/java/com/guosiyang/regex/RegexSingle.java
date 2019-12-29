@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @program: commonutil
@@ -41,7 +42,7 @@ public class RegexSingle {
     /*
      该对象主要存放相关的Stringh-Matcher
     */
-    private AbstractMap<String, Matcher> stringToMathcer=new ConcurrentHashMap<String,Matcher>(START_INITIAL,START_LOAD_FACTOR,START_CONCURRENCY_LEVEL);
+    private AbstractMap<String, Pattern> stringToMathcer=new ConcurrentHashMap<String,Pattern>(START_INITIAL,START_LOAD_FACTOR,START_CONCURRENCY_LEVEL);
 
     //指的是当前HashMap里有多少键值对
     private AtomicInteger nowKeyValueNum=new AtomicInteger();
@@ -61,14 +62,14 @@ public class RegexSingle {
      * @description: 创建内部类 对外暴露内部类 该内部类主要是提供相关对数据增删改查操作
      * 注意 : 该数据类型不允许进行删除或者进行更新 调用会进行报错
      */
-     class RegexSingleOperator implements OperateMapDataAble<String,Matcher>{
-        private AbstractMap<String,Matcher> dataMap=null;
+     private class RegexSingleOperator implements OperateMapDataAble<String,Pattern>{
+        private AbstractMap<String,Pattern> dataMap=null;
         //当第一次被被调用时自动绑定到RegexSingle中的数据存储集合
         {
             dataMap = RegexSingle.this.stringToMathcer;
         }
         @Override
-        public Matcher query(String key) {
+        public Pattern query(String key) {
             if (TrueFlagEnum.FALSE==this.exist(key)){
                 return null;
             }else{
@@ -87,12 +88,12 @@ public class RegexSingle {
         }
 
         @Override
-        public TrueFlagEnum update(String key, Matcher value) {
+        public TrueFlagEnum update(String key, Pattern value) {
             return TrueFlagEnum.FALSE;
         }
 
         @Override
-        public TrueFlagEnum add(String key, Matcher value) {
+        public TrueFlagEnum add(String key, Pattern value) {
             if (key==null || value==null || "".equals(key))
                 return TrueFlagEnum.FALSE;
             if (dataMap.containsKey(key))
@@ -106,11 +107,12 @@ public class RegexSingle {
                 dataMap.put(key,value);
                 nowKeyValueNum.getAndIncrement();
             }
+            logger.info("已插入正则为 : "+key+"的正则表达式");
             return TrueFlagEnum.TRUE;
         }
 
         @Override
-        public TrueFlagEnum delete(String key, Matcher value) {
+        public TrueFlagEnum delete(String key, Pattern value) {
             return TrueFlagEnum.FALSE;
         }
     }
@@ -120,7 +122,7 @@ public class RegexSingle {
      * @description 单例获取regexsingle对象
      */
 
-     private static  RegexSingle getRegexSingle(){
+     public static  RegexSingle getRegexSingle(){
         if (regexSingle==null){
             synchronized (RegexSingle.class){
                 if (regexSingle==null){
@@ -144,7 +146,7 @@ public class RegexSingle {
             synchronized (regexSingle) {
                 if (nowKeyValueNum.doubleValue() >= ((nowInitial-1) * START_LOAD_FACTOR) - 1){
                     int addAfterInitial = (nowInitial - 1)  * 2 + 1 ;
-                    AbstractMap<String, Matcher> addAfterHashMap =new ConcurrentHashMap<>(addAfterInitial,START_LOAD_FACTOR,START_CONCURRENCY_LEVEL);
+                    AbstractMap<String, Pattern> addAfterHashMap =new ConcurrentHashMap<>(addAfterInitial,START_LOAD_FACTOR,START_CONCURRENCY_LEVEL);
                     addAfterHashMap.putAll(stringToMathcer);
                     nowInitial = addAfterInitial;
                     stringToMathcer=addAfterHashMap;
@@ -161,7 +163,7 @@ public class RegexSingle {
      * @description 通过单例对象来获取操作连接 注意 我们必须通过此进行获取相关操作连接
      */
 
-     OperateMapDataAble<String,Matcher> getOperator(){
+     OperateMapDataAble<String,Pattern> getOperator(){
          return new RegexSingleOperator();
     }
 

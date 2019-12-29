@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="18e29264-734c-4882-8809-a596d28b09f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/guosiyang/interfaces/OperateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guosiyang/interfaces/OperateMapDataAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guosiyang/interfaces/OperateMapDataAble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guosiyang/regex/RegexSingle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guosiyang/regex/RegexSingle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/guosiyang/regex/RegexUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/guosiyang/regex/RegexUtil.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\git_Code\commonutil\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\sannerRepo" />
+        <option name="mavenHome" value="D:/maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Uf0QZFvDt0kg9q9uYQ7voTlcQc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18e29264-734c-4882-8809-a596d28b09f4" name="Default Changelist" comment="" />
+      <created>1575732326157</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575732326157</updated>
+      <workItem from="1575732331210" duration="2781000" />
+      <workItem from="1575780197217" duration="10500000" />
+      <workItem from="1575907060368" duration="85000" />
+      <workItem from="1576405049274" duration="7218000" />
+      <workItem from="1576421468143" duration="2105000" />
+      <workItem from="1576594286139" duration="1231000" />
+      <workItem from="1576595556571" duration="23000" />
+      <workItem from="1576595681441" duration="35000" />
+      <workItem from="1576595762491" duration="93000" />
+      <workItem from="1576595905038" duration="53000" />
+      <workItem from="1576595977679" duration="2309000" />
+      <workItem from="1577163344591" duration="46000" />
+      <workItem from="1577163451155" duration="4442000" />
+      <workItem from="1577167986766" duration="9000" />
+      <workItem from="1577169043200" duration="13000" />
+      <workItem from="1577169283279" duration="3875000" />
+      <workItem from="1577196170537" duration="347000" />
+      <workItem from="1577355610058" duration="383000" />
+      <workItem from="1577356026755" duration="1037000" />
+      <workItem from="1577357575186" duration="5582000" />
+      <workItem from="1577408051924" duration="9787000" />
+      <workItem from="1577497102311" duration="2258000" />
+      <workItem from="1577616181204" duration="5639000" />
+    </task>
+    <task id="LOCAL-00001" summary="2019_12_15">
+      <created>1576407861855</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576407861855</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2019_12_15">
+      <created>1576599316073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576599316073</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2019_12_15">
+      <created>1577435907365</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577435907365</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2019_12_15">
+      <created>1577456474042</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577456474042</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2019_12_15" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019_12_15" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="182" key="#Project_Structure" timestamp="1577626086492">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="182" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1577626086492" />
+    <state x="719" y="392" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1577357524281">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="719" y="392" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577357524281" />
+    <state x="572" y="117" key="CommitChangelistDialog2" timestamp="1577456472999">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="572" y="117" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577456472999" />
+    <state x="735" y="264" key="FileChooserDialogImpl" timestamp="1577435421290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="735" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1577435421290" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1577435553979">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577435553979" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1577456490841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577456490841" />
+    <state x="652" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1577616181232">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="652" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577616181232" />
+  </component>
+</project>
