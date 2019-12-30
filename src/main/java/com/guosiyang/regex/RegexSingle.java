@@ -146,7 +146,7 @@ public class RegexSingle {
             synchronized (regexSingle) {
                 if (nowKeyValueNum.doubleValue() >= ((nowInitial-1) * START_LOAD_FACTOR) - 1){
                     int addAfterInitial = (nowInitial - 1)  * 2 + 1 ;
-                    AbstractMap<String, Pattern> addAfterHashMap =new ConcurrentHashMap<>(addAfterInitial,START_LOAD_FACTOR,START_CONCURRENCY_LEVEL);
+                    AbstractMap<String, Pattern> addAfterHashMap =new ConcurrentHashMap<String, Pattern>(addAfterInitial,START_LOAD_FACTOR,START_CONCURRENCY_LEVEL);
                     addAfterHashMap.putAll(stringToMathcer);
                     nowInitial = addAfterInitial;
                     stringToMathcer=addAfterHashMap;
