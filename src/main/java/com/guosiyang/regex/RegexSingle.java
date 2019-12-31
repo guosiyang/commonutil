@@ -145,10 +145,12 @@ public class RegexSingle {
         if (nowKeyValueNum.doubleValue() >= ((nowInitial-1) * START_LOAD_FACTOR) - 2){
             synchronized (regexSingle) {
                 if (nowKeyValueNum.doubleValue() >= ((nowInitial-1) * START_LOAD_FACTOR) - 1){
+                    logger.info("扩容前容量为 : "+nowInitial + "当前keyvalue的size为 : " +nowKeyValueNum);
                     int addAfterInitial = (nowInitial - 1)  * 2 + 1 ;
                     AbstractMap<String, Pattern> addAfterHashMap =new ConcurrentHashMap<String, Pattern>(addAfterInitial,START_LOAD_FACTOR,START_CONCURRENCY_LEVEL);
                     addAfterHashMap.putAll(stringToMathcer);
                     nowInitial = addAfterInitial;
+                    logger.info("扩容后容量为 : "+nowInitial + "当前keyvalue的size为 : " +nowKeyValueNum);
                     stringToMathcer=addAfterHashMap;
                 }
             }
