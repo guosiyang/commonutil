@@ -6,25 +6,25 @@ import java.io.*;
  * @program: commonutil
  * @className: OperateDataAble
  * @version: 1.0
- * @author: ¹ùË¼Ñó
+ * @author: éƒ­æ€æ´‹
  * @date: 2019-12-15
- * @sign: ÎõÎõÈÁÈÁ, ÈËÀ´ÈËÍù
- * @description: Îª¶ÔÏóÌá¹©Éîclone
+ * @sign: ç†™ç†™æ”˜æ”˜, äººæ¥äººå¾€
+ * @description: ä¸ºå¯¹è±¡æä¾›æ·±clone
  */
 public class SerializedClone {
     @SuppressWarnings("unchecked")
     public static <T extends Serializable> T clone(T obj) {
         T cloneObj = null;
         try {
-            //Ğ´Èë×Ö½ÚÁ÷
+            //å†™å…¥å­—èŠ‚æµ
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             ObjectOutputStream obs = new ObjectOutputStream(out);
             obs.writeObject(obj);
             obs.close();
-            //·ÖÅäÄÚ´æ£¬Ğ´ÈëÔ­Ê¼¶ÔÏó£¬Éú³ÉĞÂ¶ÔÏó
+            //åˆ†é…å†…å­˜ï¼Œå†™å…¥åŸå§‹å¯¹è±¡ï¼Œç”Ÿæˆæ–°å¯¹è±¡
             ByteArrayInputStream ios = new ByteArrayInputStream(out.toByteArray());
             ObjectInputStream ois = new ObjectInputStream(ios);
-            //·µ»ØÉú³ÉµÄĞÂ¶ÔÏó
+            //è¿”å›ç”Ÿæˆçš„æ–°å¯¹è±¡
             cloneObj = (T) ois.readObject();
             ois.close();
         } catch (Exception e) {
